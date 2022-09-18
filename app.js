@@ -143,6 +143,46 @@ app.use("/", usersRoutes);
 app.use("/campgrounds", campgroundsRoutes);
 app.use("/campgrounds/:id/reviews", reviewsRoutes);
 
+app.get('/author', (req, res) => {
+    res.render('author/general');
+})
+
+app.get('/author/about/info', (req, res) => {
+    res.render('author/info');
+})
+
+app.get('/author/about/interest', (req, res) => {
+    res.render('author/interest');
+})
+
+app.get('/author/education/college', (req, res) => {
+    res.render('author/college');
+})
+
+app.get('/author/education/highschool', (req, res) => {
+    res.render('author/highschool');
+})
+
+app.get('/author/experience/viettel', (req, res) => {
+    res.render('author/viettel');
+})
+
+app.get('/author/experience/university', (req, res) => {
+    res.render('author/uni');
+})
+
+app.get('/author/experience/eup', (req, res) => {
+    res.render('author/eup');
+})
+
+app.get('/author/projects/numberpuzzle', (req, res) => {
+    res.render('author/numberpuzzle');
+})
+
+app.get('/author/projects/stocktracker', (req, res) => {
+    res.render('author/stocktracker');
+})
+
 app.get('/', (req, res) => {
     res.render('home');
 })
