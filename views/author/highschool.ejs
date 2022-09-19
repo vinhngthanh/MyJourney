@@ -1,1 +1,64 @@
 <% layout('layouts/boilerplate') %>
+
+    <div class="row">
+        <div class="col-md-5">
+            <div class="card mb-3">
+                <div id="campgroundCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://res.cloudinary.com/ntv2806/image/upload/v1663561219/YelpCamp/we3k6j8zgibmasthgsbs.jpg"
+                                class="d-block w-100" alt="">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://res.cloudinary.com/ntv2806/image/upload/v1663561219/YelpCamp/a3ppifrvew4fwrdfiepp.jpg"
+                                class="d-block w-100" alt="">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://res.cloudinary.com/ntv2806/image/upload/v1663561219/YelpCamp/malpw2giyjxrxgmpzvf0.jpg"
+                                class="d-block w-100" alt="">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#campgroundCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#campgroundCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">
+                        Hanoi-Amsterdam high school
+                    </h5>
+                    <p class="card-text">
+                    </p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        Location: Hanoi, Vietnam
+                    </li>
+                    <li class="list-group-item">
+                        Ranking: #1 in Vietnam
+                    </li>
+                    <li class="list-group-item">
+                        My major: Computer Science
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-6 offset-1">
+            <h1>Hanoi-Amsterdam high school</h1>
+            <h3>Hanoi, Vietnam</h3>
+            <div id='map'></div>
+        </div>
+    </div>
+
+    <script>
+        const mapToken = '<%-process.env.MAPBOX_TOKEN%>';
+    </script>
+
+    <script src="/javascripts/hanoiPageMap.js"></script>

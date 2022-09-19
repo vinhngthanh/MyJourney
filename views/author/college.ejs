@@ -1,1 +1,68 @@
 <% layout('layouts/boilerplate') %>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mb-3">
+                <div id="campgroundCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://res.cloudinary.com/ntv2806/image/upload/v1663560798/YelpCamp/kzytdupldcuqzb0kcstu.jpg"
+                                class="d-block w-100" alt="">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://res.cloudinary.com/ntv2806/image/upload/v1663560798/YelpCamp/w7gncbzq6tijmojqemgd.jpg"
+                                class="d-block w-100" alt="">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://res.cloudinary.com/ntv2806/image/upload/v1663560798/YelpCamp/wcriva6kgknjtuktyalo.png"
+                                class="d-block w-100" alt="">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://res.cloudinary.com/ntv2806/image/upload/v1663560798/YelpCamp/zhipxtz2hu7c5laxmagk.jpg"
+                                class="d-block w-100" alt="">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#campgroundCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#campgroundCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">
+                        University of Rochester
+                    </h5>
+                    <p class="card-text">
+                    </p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        Location: Rochester, New York
+                    </li>
+                    <li class="list-group-item">
+                        Ranking: #34 NU
+                    </li>
+                    <li class="list-group-item">
+                        Acceptance rate: 35%
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <h1>University of Rochester</h1>
+            <h3>Rochester, New York</h3>
+            <div id='map'></div>
+        </div>
+    </div>
+
+    <script>
+        const mapToken = '<%-process.env.MAPBOX_TOKEN%>';
+    </script>
+
+    <script src="/javascripts/rochesterMap.js"></script>
