@@ -30,17 +30,19 @@
                         <%= campground.title %>
                     </h5>
                     <p class="card-text">
-                        <%= campground.description %>
+                        Description: <%= campground.description %>
                     </p>
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">
-                        <%= campground.location %>
+                        Location: <%= campground.location %>
                     </li>
                     <li class="list-group-item">
                         Submitted by <%= campground.author.username %>
                     </li>
-                    <li class="list-group-item">$<%= campground.price %>/night</li>
+                    <li class="list-group-item">
+                        Price: $<%= campground.price %>/night
+                    </li>
                 </ul>
                 <% if (currentUser && campground.author.equals(currentUser._id)) { %>
                     <div class="card-body">
@@ -57,7 +59,9 @@
             </div>
         </div>
         <div class="col-6">
-
+            <h1>
+                <%= campground.location %>
+            </h1>
             <div id='map'></div>
 
             <% if (currentUser) { %>

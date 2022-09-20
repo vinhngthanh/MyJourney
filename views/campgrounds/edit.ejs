@@ -1,6 +1,6 @@
 <% layout('layouts/boilerplate') %>
     <div class="row">
-        <h1 class="text-center">Edit Campground</h1>
+        <h1 class="text-center">Edit Journey</h1>
         <div class="col-md-6 offset-md-3">
             <form action="/campgrounds/<%= campground._id %>?_method=PUT " method="POST" novalidate
                 class="validated-form" enctype="multipart/form-data">
@@ -26,7 +26,7 @@
                 </div>
 
                 <div class="mb-3">
-                    <label class="form-label" for="price">Campground Price</label>
+                    <label class="form-label" for="price">Price</label>
                     <div class="input-group">
                         <span class="input-group-text" id="price-label">$</span>
                         <input type="text" class="form-control" name="campground[price]" placeholder=" 0.00"
@@ -57,9 +57,9 @@
                         <% }) %>
                 </div>
                 <div class="mb-3">
-                    <button class="btn btn-info">Update Campground</button>
+                    <button class="btn btn-info">Update Journey</button>
                 </div>
             </form>
-            <a href="/campgrounds/<%= campground._id %> ">Back to Campground</a>
+            <a href="/campgrounds/<%= campground._id %> ">Back to all Journeys</a>
         </div>
     </div>
