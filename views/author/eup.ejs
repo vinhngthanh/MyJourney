@@ -1,1 +1,66 @@
 <% layout('layouts/boilerplate') %>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mb-3">
+                <div id="campgroundCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://res.cloudinary.com/ntv2806/image/upload/v1663629897/YelpCamp/qdkrbgrbrfs7pikggxox.webp"
+                                class="d-block w-100" alt="">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://res.cloudinary.com/ntv2806/image/upload/v1663629897/YelpCamp/hnbuzxbsozgg3cevrluh.jpg"
+                                class="d-block w-100" alt="">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#campgroundCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#campgroundCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <div class="card-body bg-dark text-white border-light">
+                    <h5 class="card-title">
+                        Employer: European Plastic Company
+                    </h5>
+                    <h6>Job title: Audit Internship</h6>
+                    <p class="card-text">
+                        Description:
+                        <li>Used databases like SQL and data structures to manage and process information. Enhanced
+                            Office skills and gain basic insight into business administration</li>
+                        <li>Attended a meeting with another technology company who tried to sell their product and see
+                            how my company auditing team analyze its products and financial impact</li>
+                    </p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item bg-dark text-white border-light">
+                        Location: Hanoi, Vietnam
+                    </li>
+                    <li class="list-group-item bg-dark text-white border-light">
+                        Start date: 06/01/2021
+                    </li>
+                    <li class="list-group-item bg-dark text-white border-light">
+                        End date: 08/01/2021
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <h1>European Plastic Company</h1>
+            <h3>Hanoi, Vietnam</h3>
+            <div id='map'></div>
+        </div>
+    </div>
+
+    <script>
+        const mapToken = '<%-process.env.MAPBOX_TOKEN%>';
+    </script>
+
+    <script src="/javascripts/hanoiPageMap.js"></script>
