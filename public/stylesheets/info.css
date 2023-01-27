@@ -1,0 +1,9 @@
+.round-img {
+    border: solid 2px black;
+    padding: 0;
+}
+
+.box-shadow {
+    padding: 0;
+    box-shadow: 1px 1px 5px 5px #cdcccc;
+}
