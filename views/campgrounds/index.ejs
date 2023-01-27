@@ -1,12 +1,15 @@
 <% layout('layouts/boilerplate') %>
+    <link rel="stylesheet" href="/stylesheets/image-index.css">
+
     <div id="cluster-map"></div>
 
     <h1 class="text-center mt-5">All Journeys</h1>
 
     <% for(let campground of campgrounds){ %>
-        <div class="card mb-3 bg-dark">
+        <div class="card mb-3 bg-dark box-shadow">
             <div class="row">
-                <div class="col-md-4">
+
+                <!-- <div class="col-md-4">
                     <% if (campground.images.length) { %>
                         <img class="img-thumbnail" alt="" src="<%= campground.images[0].url %> ">
                         <% } else{%>
@@ -14,9 +17,20 @@
                                 src="https://res.cloudinary.com/ntv2806/image/upload/v1662692075/YelpCamp/vbdcgfqflpdtx4sj286h.webp">
                             <% } %>
 
+                </div> -->
+
+                <div class="col-md-4 img-holder">
+                    <% if (campground.images.length) { %>
+                        <img class="img-box" alt="" src="<%= campground.images[0].url %> ">
+                        <% } else{%>
+                            <img class="img-box" alt=""
+                                src="https://res.cloudinary.com/ntv2806/image/upload/v1662692075/YelpCamp/vbdcgfqflpdtx4sj286h.webp">
+                            <% } %>
+
                 </div>
+
                 <div class="col-md-8">
-                    <div class="card-body text-white bg-dark">
+                    <div class="card-body text-white bg-dark des-box">
                         <h3 class="card-title">
                             <%= campground.title %>
                         </h3>
@@ -26,7 +40,7 @@
                             <li class="list-group-item text-white bg-dark border-light">
                                 Location: <%= campground.location %>
                             </li>
-                            <li class="list-group-item text-white bg-dark border-light mt-2">
+                            <li class="list-group-item text-white bg-dark border-light">
                                 <small class="">
                                     Description: <%= campground.description %>
                                 </small>
