@@ -25,3 +25,32 @@
     border-radius: 5px;
     box-shadow: 1px 1px 5px 5px #cdcccc;
 }
+
+.link {
+    text-decoration: none;
+    color: #0c7ecf;
+}
+
+.link:visited {
+    text-decoration: none;
+    color: #0c7ecf;
+}
+
+.link:hover {
+    text-decoration: underline;
+    color: #13476c;
+}
+
+.link:focus {
+    text-decoration: underline;
+    color: #13476c;
+}
+
+.link:active {
+    text-decoration: underline;
+    color: #13476c;
+}
+
+.mid {
+    text-align: center;
+}
