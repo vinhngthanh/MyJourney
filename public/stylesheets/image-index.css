@@ -2,8 +2,7 @@
     object-fit: cover;
     width: 100%;
     height: 100%;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+    border-radius: 5px;
 }
 
 .img-holder {
@@ -17,4 +16,37 @@
 
 .des-box {
     height: 100%;
+}
+
+.mid {
+    text-align: center;
+}
+
+.link {
+    text-decoration: none;
+    color: #0c7ecf;
+}
+
+.link:visited {
+    text-decoration: none;
+    color: #00205b;
+}
+
+.link:hover {
+    text-decoration: underline;
+    color: #00205b;
+}
+
+.link:focus {
+    text-decoration: underline;
+    color: #00205b;
+}
+
+.link:active {
+    text-decoration: underline;
+    color: #00205b;
+}
+
+.text-dark-blue {
+    color: #00205b;
 }

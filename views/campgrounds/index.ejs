@@ -4,54 +4,54 @@
     <div id="cluster-map"></div>
 
     <h1 class="text-center mt-5">All Journeys</h1>
-
-    <% for(let campground of campgrounds){ %>
-        <div class="card mb-3 bg-dark box-shadow">
-            <div class="row">
-
-                <div class="col-md-4 img-holder">
-                    <% if (campground.images.length) { %>
-                        <img class="img-box" alt="" src="<%= campground.images[0].url %> ">
-                        <% } else{%>
-                            <img class="img-box" alt=""
-                                src="https://res.cloudinary.com/ntv2806/image/upload/v1662692075/YelpCamp/vbdcgfqflpdtx4sj286h.webp">
-                            <% } %>
-
+    <div class="row">
+        <% for(let i=0; i < campgrounds.length; i++){ %>
+            <% let campground=campgrounds[i]%>
+                <div class="col-lg-4 offset-md-0 offset-xs-0 offset-sm-0 offset-lg-0">
+                    <a class="link" href="/campgrounds/<%= campground._id %>">
+                        <div class="card mb-3 bg-white box-shadow">
+                            <% if (campground.images.length) { %>
+                                <div class="img-holder">
+                                    <img class="img-box" alt="" src="<%= campground.images[0].url %> ">
+                                    <% } else{%>
+                                        <img class="img-box" alt=""
+                                            src="https://res.cloudinary.com/ntv2806/image/upload/v1662692075/YelpCamp/vbdcgfqflpdtx4sj286h.webp">
+                                        <% } %>
+                                </div>
+                                <div class="card-body text-dark-blue bg-white des-box mid">
+                                    <h3 class="card-title">
+                                        <%= campground.title %>
+                                    </h3>
+                                    <!-- <ul class="list-group list-group-flush">
+                                    <li class="list-group-item text-white bg-dark border-light">
+                                    </li>
+                                    <li class="list-group-item text-white bg-dark border-light">
+                                        Location: <%= campground.location %>
+                                    </li>
+                                    <li class="list-group-item text-white bg-dark border-light">
+                                        <small class="">
+                                            Description: <%= campground.description %>
+                                        </small>
+                                    </li>
+                                    <li class="list-group-item text-white bg-dark border-light">
+                                        Price: <%= campground.price %>
+                                    </li>
+                                    <li class="list-group-item text-white bg-dark border-light mt-2">
+                                        <a href="/campgrounds/<%= campground._id %> " class="btn btn-primary">View
+                                            <%= campground.title %>
+                                        </a>
+                                    </li>
+                                </ul> -->
+                                </div>
+                        </div>
+                    </a>
                 </div>
+                <% } %>
+    </div>
 
-                <div class="col-md-8">
-                    <div class="card-body text-white bg-dark des-box">
-                        <h3 class="card-title">
-                            <%= campground.title %>
-                        </h3>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item text-white bg-dark border-light">
-                            </li>
-                            <li class="list-group-item text-white bg-dark border-light">
-                                Location: <%= campground.location %>
-                            </li>
-                            <li class="list-group-item text-white bg-dark border-light">
-                                <small class="">
-                                    Description: <%= campground.description %>
-                                </small>
-                            </li>
-                            <li class="list-group-item text-white bg-dark border-light">
-                                Price: <%= campground.price %>
-                            </li>
-                            <li class="list-group-item text-white bg-dark border-light mt-2">
-                                <a href="/campgrounds/<%= campground._id %> " class="btn btn-primary">View <%=
-                                        campground.title %></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <% } %>
+    <script>
+        const mapToken = '<%-process.env.MAPBOX_TOKEN%>';
+        const campgrounds = { features:<%-JSON.stringify(campgrounds) %>};
+    </script>
 
-            <script>
-                const mapToken = '<%-process.env.MAPBOX_TOKEN%>';
-                const campgrounds = { features:<% -JSON.stringify(campgrounds) %>};
-            </script>
-
-            <script src="/javascripts/clusterMap.js"></script>
+    <script src="/javascripts/clusterMap.js"></script>
