@@ -3,7 +3,7 @@
 
     <div id="cluster-map"></div>
 
-    <h1 class="text-center mt-5">All Journeys</h1>
+    <h1 class="text-center mt-5 mb-4">All Journeys</h1>
     <div class="row">
         <% for(let i=0; i < campgrounds.length; i++){ %>
             <% let campground=campgrounds[i]%>
@@ -55,3 +55,9 @@
     </script>
 
     <script src="/javascripts/clusterMap.js"></script>
+
+    <script>
+        var element = document.getElementById("cluster-map");
+        element.classList.add("mapboxgl-map");
+        element.classList.add("box-shadow");
+    </script>
