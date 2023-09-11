@@ -164,6 +164,10 @@ app.get("/author/education/highschool", (req, res) => {
   res.render("author/highschool");
 });
 
+app.get("/author/experience/itdgroup", (req, res) => {
+  res.render("author/itdgroup");
+});
+
 app.get("/author/experience/viettel", (req, res) => {
   res.render("author/viettel");
 });
