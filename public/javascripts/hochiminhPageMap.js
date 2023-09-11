@@ -12,7 +12,7 @@ new mapboxgl.Marker()
     .setPopup(
         new mapboxgl.Popup({ offset: 25 })
             .setHTML(
-                `<h3>My Hometown</h3><p>Ho Chi Minh City, Vietnam</p>`
+                `<h3>ITD Group</h3><p>Ho Chi Minh City, Vietnam</p>`
             )
     )
     .addTo(map)
